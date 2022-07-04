@@ -740,3 +740,78 @@ function Final_result(){
     }
 
 }
+
+
+
+
+
+// =================================
+// Without 4th Subject  Calculating Function
+// =================================
+
+
+
+
+function Final_result_4th(){
+    if(
+    document.getElementById("grade-bangla").value == "F" || document.getElementById("grade-english").value == "F" || document.getElementById("grade-physics").value == "F" || document.getElementById("grade-chemistry").value == "F" || document.getElementById("grade-higher-math").value == "F" || document.getElementById("grade-ict").value == "F" || 
+    document.getElementById("grade-psychology").value == "F" || 
+    document.getElementById("grade-geography").value == "F" || 
+    document.getElementById("grade-statics").value == "F" ||
+    document.getElementById("grade-economics").value == "F"
+    )
+    {
+        document.getElementById("grade-4th").value="Fail";
+        document.getElementById("point-4th").value="0";
+    }
+    else {
+
+
+        var _total_point_bangla = document.getElementById("point-bangla").value;
+        var _total_point_english = document.getElementById("point-english").value;
+        var _total_point_physics = document.getElementById("point-physics").value;
+        var _total_point_chemistry = document.getElementById("point-chemistry").value;
+        var _total_point_higher_math = document.getElementById("point-higher-math").value;
+        var _total_point_ict = document.getElementById("point-ict").value;
+        var _total_point_psychology = document.getElementById("point-psychology").value;
+        var _total_point_geography = document.getElementById("point-geography").value;
+        var _total_point_statics = document.getElementById("point-statics").value;
+        var _total_point_economics = document.getElementById("point-economics").value;
+
+
+        var _totalPoints = ((parseFloat(_total_point_bangla)+parseFloat(_total_point_english)+parseFloat(_total_point_physics)+parseFloat(_total_point_chemistry)+parseFloat(_total_point_higher_math)+parseFloat(_total_point_ict)+parseFloat(_total_point_psychology)+parseFloat(_total_point_geography)+parseFloat(_total_point_statics)+parseFloat(_total_point_economics))/10);
+
+        document.getElementById("point-4th").value=_totalPoints;
+
+
+        if(_totalPoints ==5.00){
+
+            document.getElementById("grade-4th").value="A+";
+        }
+        else if(_totalPoints >=4.00 && _totalPoints <= 4.99){
+
+            document.getElementById("grade-4th").value="A";
+        }
+        else if(_totalPoints >=3.50 && _totalPoints <= 3.99){
+
+            document.getElementById("grade-4th").value="A-";
+        }
+        else if(_totalPoints >=3.00 && _totalPoints <= 3.49){
+
+            document.getElementById("grade-4th").value="B";
+        }
+        else if(_totalPoints >=2.00 && _totalPoints <= 2.99){
+
+            document.getElementById("grade-4th").value="C";
+        }
+        else if(_totalPoints >=1.00 && _totalPoints <= 1.99){
+
+            document.getElementById("grade-4th").value="D";
+        }
+
+
+
+    
+    }
+
+}
