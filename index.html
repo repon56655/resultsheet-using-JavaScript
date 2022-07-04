@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Project 01</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <div class="">
+        <table class="table table-dark table-hover">
+            <thead>
+              <tr class="text-center">
+                <th scope="col">#Sl. No.</th>
+                <th scope="col">Subject Name</th>
+                <th scope="col">Subject Code</th>
+                <th scope="col">Theory Marks</th>
+                <th scope="col">Practical Marks</th>
+                <th scope="col">Total Marks</th>
+                <th scope="col">Grade</th>
+                <th scope="col">Point</th>
+                <th scope="col">Action</th>
+
+              </tr>
+            </thead>
+            <tbody>
+
+            <!-- Bangla Subject  -->
+              <tr class="text-center">
+                <th scope="row">01</th>
+                <td>Bangla</td>
+                <td>101</td>
+                <td><input class="rounded text-center form-control" type="text" id="theory-marks-bangla"></td>
+                <td><input class="rounded text-center form-control" type="text" id="practical-marks-bangla"></td>
+                <td><input class="rounded text-center form-control" type="text" id="total-marks-bangla"></td>
+                <td><input class="rounded text-center form-control" type="text" id="grade-bangla"></td>
+                <td><input class="rounded text-center form-control" type="text" id="point-bangla"></td>
+                <td><input class="btn btn-primary" type="submit" value="Get Result" onclick="result_bangla()"></td>
+              </tr>
+
+            <!-- English Subject  -->
+              <tr class="text-center">
+                <th scope="row">02</th>
+                <td>English</td>
+                <td>107</td>
+                <td><input class="rounded text-center form-control" type="text" id="theory-marks-english"></td>
+                <td><input class="rounded text-center form-control" type="text" id="practical-marks-english"></td>
+                <td><input class="rounded text-center form-control" type="text" id="total-marks-english"></td>
+                <td><input class="rounded text-center form-control" type="text" id="grade-english"></td>
+                <td><input class="rounded text-center form-control" type="text" id="point-english"></td>
+                <td><input class="btn btn-primary" type="submit" value="Get Result" onclick="result_english()"></td>
+              </tr>
+              <!-- Physics Subject  -->
+              <tr class="text-center">
+                <th scope="row">03</th>
+                <td>Physics</td>
+                <td>174</td>
+                <td><input class="rounded text-center form-control"  type="text" id="theory-marks-physics"></td>
+                <td><input class="rounded text-center form-control"  type="text" id="practical-marks-physics"></td>
+                <td><input class="rounded text-center form-control"  type="text" id="total-marks-physics"></td>
+                <td><input class="rounded text-center form-control"  type="text" id="grade-physics"></td>
+                <td><input class="rounded text-center form-control"  type="text" id="point-physics"></td>
+                <td><input class="btn btn-primary" type="submit" value="Get Result" onclick="result_physics()"></td>
+              </tr>
+              <!-- Chemistry Subject  -->
+              <tr class="text-center">
+                <th scope="row">04</th>
+                <td>Chemistry</td>
+                <td>176</td>
+                <td><input class="rounded text-center form-control"  type="text" id="theory-marks-chemistry"></td>
+                <td><input class="rounded text-center form-control"  type="text" id="practical-marks-chemistry"></td>
+                <td><input class="rounded text-center form-control"  type="text" id="total-marks-chemistry"></td>
+                <td><input class="rounded text-center form-control"  type="text" id="grade-chemistry"></td>
+                <td><input class="rounded text-center form-control"  type="text" id="point-chemistry"></td>
+                <td><input class="btn btn-primary" type="submit" value="Get Result" onclick="result_chemistry()"></td>
+              </tr>
+
+              <!-- Biology Subject  -->
+              <tr class="text-center">
+                <th scope="row">05</th>
+                <td>Biology</td>
+                <td>178</td>
+                <td><input class="rounded text-center form-control"  type="text" id="theory-marks-biology"></td>
+                <td><input class="rounded text-center form-control"  type="text" id="practical-marks-biology"></td>
+                <td><input class="rounded text-center form-control"  type="text" id="total-marks-biology"></td>
+                <td><input class="rounded text-center form-control"  type="text" id="grade-biology"></td>
+                <td><input class="rounded text-center form-control"  type="text" id="point-biology"></td>
+                <td><input class="btn btn-primary" type="submit" value="Get Result" onclick="result_biology()"></td>
+              </tr>
+
+              <!-- Higher Mathematics Subject  -->
+              <tr class="text-center">
+                <th scope="row">06</th>
+                <td>Higher Mathematics</td>
+                <td>265</td>
+                <td><input class="rounded text-center form-control"  type="text" id="theory-marks-higher-math"></td>
+                <td><input class="rounded text-center form-control"  type="text" id="practical-marks-higher-math"></td>
+                <td><input class="rounded text-center form-control"  type="text" id="total-marks-higher-math"></td>
+                <td><input class="rounded text-center form-control"  type="text" id="grade-higher-math"></td>
+                <td><input class="rounded text-center form-control"  type="text" id="point-higher-math"></td>
+                <td><input class="btn btn-primary" type="submit" value="Get Result" onclick="result_higher_math()"></td>
+              </tr>
+
+              <!-- Information and Communication Technology Subject  -->
+              <tr class="text-center">
+                <th scope="row">07</th>
+                <td>ICT</td>
+                <td>275</td>
+                <td><input class="rounded text-center form-control"  type="text" id="theory-marks-ict"></td>
+                <td><input class="rounded text-center form-control"  type="text" id="practical-marks-ict"></td>
+                <td><input class="rounded text-center form-control"  type="text" id="total-marks-ict"></td>
+                <td><input class="rounded text-center form-control"  type="text" id="grade-ict"></td>
+                <td><input class="rounded text-center form-control"  type="text" id="point-ict"></td>
+                <td><input class="btn btn-primary" type="submit" value="Get Result" onclick="result_ict()"></td>
+              </tr>
+
+              <!-- Psychology Subject  -->
+              <tr class="text-center">
+                <th scope="row">08</th>
+                <td>Psychology</td>
+                <td>123</td>
+                <td><input class="rounded text-center form-control"  type="text" id="theory-marks-psychology"></td>
+                <td><input class="rounded text-center form-control"  type="text" id="practical-marks-psychology"></td>
+                <td><input class="rounded text-center form-control"  type="text" id="total-marks-psychology"></td>
+                <td><input class="rounded text-center form-control"  type="text" id="grade-psychology"></td>
+                <td><input class="rounded text-center form-control"  type="text" id="point-psychology"></td>
+                <td><input class="btn btn-primary" type="submit" value="Get Result" onclick="result_psychology()"></td>
+              </tr>
+
+              <!-- Geography Subject  -->
+              <tr class="text-center">
+                <th scope="row">09</th>
+                <td>Geography</td>
+                <td>125</td>
+                <td><input class="rounded text-center form-control"  type="text" id="theory-marks-geography"></td>
+                <td><input class="rounded text-center form-control"  type="text" id="practical-marks-geography"></td>
+                <td><input class="rounded text-center form-control"  type="text" id="total-marks-geography"></td>
+                <td><input class="rounded text-center form-control"  type="text" id="grade-geography"></td>
+                <td><input class="rounded text-center form-control"  type="text" id="point-geography"></td>
+                <td><input class="btn btn-primary" type="submit" value="Get Result" onclick="result_geography()"></td>
+              </tr>
+
+              <!-- Statics Subject  -->
+              <tr class="text-center">
+                <th scope="row">10</th>
+                <td>Statics</td>
+                <td>129</td>
+                <td><input class="rounded text-center form-control"  type="text" id="theory-marks-statics"></td>
+                <td><input class="rounded text-center form-control"  type="text" id="practical-marks-statics"></td>
+                <td><input class="rounded text-center form-control"  type="text" id="total-marks-statics"></td>
+                <td><input class="rounded text-center form-control"  type="text" id="grade-statics"></td>
+                <td><input class="rounded text-center form-control"  type="text" id="point-statics"></td>
+                <td><input class="btn btn-primary" type="submit" value="Get Result" onclick="result_statics()"></td>
+              </tr>
+
+              <!-- Economics Subject  -->
+              <tr class="text-center">
+                <th scope="row">11</th>
+                <td>Economics</td>
+                <td>109</td>
+                <td><input class="rounded text-center form-control"  type="text" id="theory-marks-economics"></td>
+                <td><input class="rounded text-center form-control"  type="text" id="practical-marks-economics"></td>
+                <td><input class="rounded text-center form-control"  type="text" id="total-marks-economics"></td>
+                <td><input class="rounded text-center form-control"  type="text" id="grade-economics"></td>
+                <td><input class="rounded text-center form-control"  type="text" id="point-economics"></td>
+                <td><input class="btn btn-primary" type="submit" value="Get Result" onclick="result_economics()"></td>
+              </tr>
+
+              <!-- Total Result  -->
+              <tr class="text-center">
+                <td colspan="5"> <h2>Total Calculation</h2></td>
+                <td><input class="rounded text-center form-control"  type="text" id="total-marks"></td>
+                <td><input class="rounded text-center form-control"  type="text" id="grade"></td>
+                <td><input class="rounded text-center form-control"  type="text" id="point"></td>
+                <td><input class="btn btn-danger form-control" type="submit" value="Result" onclick="Final_result()"></td>
+              </tr>
+
+            </tbody>
+          </table>
+    </div>
+    
+
+
+    <script src="script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+</html>
